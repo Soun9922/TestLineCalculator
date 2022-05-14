@@ -29,10 +29,18 @@ public class LineComaprison {
         lineDistance2 = Math.sqrt((a2 - a1) * (a2 - a1) + (b2 - b1) * (b2 - b1));
         System.out.println("The Length of the Line 1 : " + lineDistance1);
         System.out.println("The Length of the Line 2 : " + lineDistance2);
-        if (lineDistance1 == lineDistance2)
-            System.out.println("The lines are equal.");
-        else
-            System.out.println("The lines are not equal.");
-
+        String line1 = String.valueOf(lineDistance1);
+        String line2 = String.valueOf(lineDistance2);
+        if (line1.compareTo( line2 ) > 0){
+            System.out.println("Line1 is Greater");
+        } else if (line1.compareTo(line2) < 0) {
+            System.out.println("Line1 is Smaller");
+        } else if (line2.compareTo(line1) > 0) {
+            System.out.println("Line2 is Greater");
+        } else if (line2.compareTo(line1) < 0) {
+            System.out.println("Line2 is Smaller");
+        } else if (line1.equals(line2)) {
+            System.out.println("The Lines are equal");
+        }
     }
 }
